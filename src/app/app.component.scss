@@ -1,17 +1,17 @@
 /* Estilos globales */
-$typography-font-family: 'Baskerville', serif; /* Fuente de texto principal */
-$background-ships: #4a4d4c;
-$background-filters: #2e2f2f;
+$typography-font-family: "Baskerville", serif; /* Fuente de texto principal */
+$background-ships: #000000;
 
 /* Estilos para el header */
 header {
   display: flex;
   color: white; /* Color de texto */
   align-items: center;
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  justify-content: center; /* Alinea el contenido a la izquierda */
   height: 70px;
   padding: 10px;
   font-family: $typography-font-family;
+  background-color: rgb(41, 2, 2);
 
   .header-title {
     margin-top: 5px;
@@ -20,7 +20,7 @@ header {
   .header-image {
     max-height: 50px;
     width: auto;
-    margin: 0 15px; /* Margen izquierdo y derecho */
+    margin-right: 15px; /* Margen izquierdo y derecho */
     filter: invert(100%); /* Invierte los colores de la imagen */
   }
 }
@@ -28,8 +28,4 @@ header {
 /* Estilos para los fondos de las secciones */
 .background-ships {
   background-color: $background-ships; /* Color de fondo de la sección de naves */
-}
-
-.background-filters {
-  background-color: $background-filters; /* Color de fondo de la sección de filtros */
 }

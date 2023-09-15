@@ -19,7 +19,7 @@ export class StarshipService {
    */
   constructor(private http: HttpClient) {}
 
-  // Obtiene el listado completo de naves espaciales.
+  /* Obtiene el listado completo de naves espaciales. */
   getStarships(): Observable<Starship[]> {
     return this.getStarshipsPage(this.apiUrl);
   }

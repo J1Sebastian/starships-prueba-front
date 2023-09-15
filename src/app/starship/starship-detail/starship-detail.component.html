@@ -1,0 +1,91 @@
+<!-- Boton de Regreso -->
+<div class="row">
+  <div class="col-3">
+    <button class="goback-button" (click)="unselectDetail()">Go Back</button>
+  </div>
+</div>
+
+<!-- Detalles de la nave -->
+<div class="row">
+  <div class="starship-details">
+    <!-- Nombre de la nave -->
+    <div class="header">
+      <h2>{{ starshipDetail.name }}</h2>
+    </div>
+    <div class="details">
+
+      <div class="row">
+        <!-- Modelo de la nave -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card text-white mb-4 card-detail">
+            <div class="card-body">
+              <h5 class="card-title">Model</h5>
+              <p class="card-text">{{starshipDetail.model}}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Costo de la nave -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card text-white mb-4 card-detail">
+            <div class="card-body">
+              <h5 class="card-title">Cost (in credits):</h5>
+              <p class="card-text">{{ starshipDetail.cost_in_credits }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Capacidad de tripulacion de la nave -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card text-white mb-4 card-detail">
+            <div class="card-body">
+              <h5 class="card-title">Personnel carrying capacity:</h5>
+              <p class="card-text">{{ starshipDetail.crew }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capacidad de pasajeros de la nave -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card text-white mb-4 card-detail">
+            <div class="card-body">
+              <h5 class="card-title">Passenger carrying capacity:</h5>
+              <p class="card-text">{{ starshipDetail.passengers }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Pilotos asignados a la nave -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card text-white mb-4 card-detail">
+            <div class="card-body">
+              <h5 class="card-title">Assigned pilots:</h5>
+              <ng-container *ngIf="!starshipDetail.pilotsObjects; else Pilots">
+                <p class="card-text">No Pilots Available</p>
+              </ng-container>
+              <ng-template #Pilots>
+                <ul class="pilots-list">
+                  <li *ngFor="let pilot of starshipDetail.pilotsObjects">{{ pilot.name }}</li>
+                </ul>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velocidad maxima de la nave -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card text-white mb-4 card-detail">
+            <div class="card-body">
+              <h5 class="card-title">Max speed (atmosphering):</h5>
+              <p class="card-text">{{ starshipDetail.max_atmosphering_speed }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

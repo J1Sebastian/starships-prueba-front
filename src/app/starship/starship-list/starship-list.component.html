@@ -1,10 +1,16 @@
-<div class="container-fluid">
+<!-- Se utiliza un ngIf para mostrar el detalle de la nave si se ha seleccionado una -->
+<div *ngIf="selected; then detail else list"></div>
 
+<ng-template #detail>
+  <app-starship-detail [starshipDetail]="selectedStarship"></app-starship-detail> <!-- Se envía la nave seleccionada al componente de detalle -->
+</ng-template>
+
+<ng-template #list>
   <!-- Reporte de la cantidad de naves -->
   <div class="row report">
     <div class="col-12 text-center">
       <h3 class="total-starships">Total Starships</h3>
-      <p class="starship-description">Currently in our fleet: {{ starships.length }}</p>
+      <p class="starship-description">Currently in the galaxy: {{ starships.length }}</p>
     </div>
   </div>
 
@@ -12,8 +18,8 @@
   <div class="row">
 
     <!-- Se recorre el arreglo de naves y se muestra la información -->
-    <div class="col" *ngFor="let starship of starships">
-      <div class="card text-white mb-4 hover-card">
+    <div class="col-sm-4 col-md-3" *ngFor="let starship of starships">
+      <div class="card text-white mb-4 hover-card" (click)="onSelectedStarship(starship)">
         <div class="card-body">
           <h5 class="card-title">{{starship.name}}</h5>
           <p class="card-text">{{starship.model}}</p>
@@ -22,4 +28,4 @@
     </div>
     <!-- Fin del recorrido -->
   </div>
-</div>
+</ng-template>

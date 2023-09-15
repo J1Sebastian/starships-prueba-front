@@ -12,7 +12,8 @@ export class Starship {
   max_atmosphering_speed: string;
   crew: string;
   passengers: string;
-  pilots: Pilot[];
+  pilots: string[];
+  pilotsObjects: Pilot[];
 
   /**
    * Crear una nueva instancia de la clase Starship.
@@ -22,7 +23,7 @@ export class Starship {
    * @param {string} max_atmosphering_speed - La velocidad maxima de la nave.
    * @param {string} crew - La capacidad de la tripulacion de la nave.
    * @param {string} passengers - La capacidad de pasajeros de la nave.
-   * @param {Pilot[]} pilots - Los pilotos asignados a la nave.
+   * @param {string[]} pilots - Las urls de los pilotos asignados a la nave.
    */
   constructor(
     name: string,
@@ -31,7 +32,7 @@ export class Starship {
     max_atmosphering_speed: string,
     crew: string,
     passengers: string,
-    pilots: Pilot[]
+    pilots: string[],
   ) {
     this.name = name;
     this.model = model;
@@ -40,5 +41,6 @@ export class Starship {
     this.crew = crew;
     this.passengers = passengers;
     this.pilots = pilots;
+    this.pilotsObjects = [];
   }
 }

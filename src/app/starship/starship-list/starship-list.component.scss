@@ -1,7 +1,10 @@
+$title-color: #09c5d2;
+$card-color: #252626;
+
 /* Estilos para las tarjetas de naves */
 .hover-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  background-color: rgb(37, 38, 38);
+  background-color: $card-color;
   width: 22rem;
   max-width: 100%;
   text-align: center;
@@ -13,12 +16,12 @@
   transform: scale(1.1); /* Hace la tarjeta un 10% más grande */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   z-index: 1; /* Asegura que la tarjeta esté por encima de otras */
-  background-color: #000000;
+  filter: invert(100%)
 }
 
 /* Estilos para el título de las tarjetas */
 .card-title{
-  color: #09c5d2;
+  color: $title-color
 }
 
 /* Estilos para el reporte de naves totales */

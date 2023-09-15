@@ -1,0 +1,84 @@
+@import 'src/app/starship/starship-list/starship-list.component.scss';
+
+/* Estilo para el contenedor de la información de la nave */
+.starship-details {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+
+  .header {
+    background-color: #000000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 2.1rem;
+      font-weight: bolder;
+      margin: 0;
+    }
+
+    .details {
+      display: grid;
+      text-align: left;
+      padding-top: 10px;
+    }
+  }
+}
+
+/* Estilo para las tarjetas de información de la nave */
+.card-detail {
+  max-width: 100%;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background-color: $card-color;
+  border-radius: 10px;
+
+  .card-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
+
+  /* Estilo para la lista de pilotos */
+  .pilots-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 15px 0;
+      border-bottom: 1px solid #555;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+}
+
+/* Estilo para el botón "Go Back" */
+.goback-button {
+    background-color: #187a7f;
+    margin-left: 8px;
+    margin-top: 20px;
+    color: white;
+    padding: 10px 30px;
+    width: auto;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+        background-color: rgb(123, 17, 17);
+    }
+}
