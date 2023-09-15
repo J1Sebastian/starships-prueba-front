@@ -1,0 +1,35 @@
+/* Estilos globales */
+$typography-font-family: 'Baskerville', serif; /* Fuente de texto principal */
+$background-ships: #4a4d4c;
+$background-filters: #2e2f2f;
+
+/* Estilos para el header */
+header {
+  display: flex;
+  color: white; /* Color de texto */
+  align-items: center;
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  height: 70px;
+  padding: 10px;
+  font-family: $typography-font-family;
+
+  .header-title {
+    margin-top: 5px;
+  }
+
+  .header-image {
+    max-height: 50px;
+    width: auto;
+    margin: 0 15px; /* Margen izquierdo y derecho */
+    filter: invert(100%); /* Invierte los colores de la imagen */
+  }
+}
+
+/* Estilos para los fondos de las secciones */
+.background-ships {
+  background-color: $background-ships; /* Color de fondo de la sección de naves */
+}
+
+.background-filters {
+  background-color: $background-filters; /* Color de fondo de la sección de filtros */
+}

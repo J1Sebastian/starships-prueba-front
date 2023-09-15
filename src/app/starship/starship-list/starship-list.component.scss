@@ -1,0 +1,46 @@
+/* Estilos para las tarjetas de naves */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: rgb(37, 38, 38);
+  width: 22rem;
+  max-width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Estilos para las tarjetas al pasar el mouse por encima */
+.hover-card:hover {
+  transform: scale(1.1); /* Hace la tarjeta un 10% más grande */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Asegura que la tarjeta esté por encima de otras */
+  background-color: #000000;
+}
+
+/* Estilos para el título de las tarjetas */
+.card-title{
+  color: #09c5d2;
+}
+
+/* Estilos para el reporte de naves totales */
+.report {
+  .text-center {
+
+    /* Estilos para el título del reporte */
+    .total-starships {
+      font-size: 24px;
+      color: #f5c528;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    /* Estilos para la descripción del reporte */
+    .starship-description {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+  }
+}
+
